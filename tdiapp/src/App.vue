@@ -1,10 +1,17 @@
 <template>
   <div id="app">
-    <router-link to="/">home page</router-link>
-    <router-link to="/person">person</router-link>
-    <router-view></router-view>
+    {{ $t("message") }}
+    <router-link :to="`/${$i18n.locale}/home`">home page</router-link>
+    <router-link :to="`/${$i18n.locale}/person`">person</router-link>
 
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <button @click.prevent="gogo('en')">en</button>
+    <button @click.prevent="gogo('ru')">ru</button>
+
+    <transition name="slide">
+      <router-view></router-view>
+    </transition>
+
+    <img alt="Vue logo" src="@/assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -17,10 +24,21 @@ export default {
   components: {
     HelloWorld,
   },
+  data() {
+    return { langs: ["en", "ru"] };
+  },
+  methods: {
+    gogo(locale) {
+      this.$i18n.locale = locale;
+      this.$router.push({
+        params: { lang: locale },
+      });
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

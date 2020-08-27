@@ -1,7 +1,5 @@
 <template>
-  <div>
-    this is person
-  </div>
+  <div>this is person {{ $t("message") }}</div>
 </template>
 
 <script>
