@@ -1,0 +1,210 @@
+@mixin mQ($arg) {
+    @media screen and (max-width:$arg) {
+        @content;
+    }
+}
+
+
+.hedaer-box {
+    width: 100%;
+    height: 70vh;
+    background-image: url('../../../assets/14256/14256@2x.png');
+    background-repeat: no-repeat;
+    content: "";
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+    .box-filter {
+        background-color: rgba(0, 35, 51, 0.6);
+        width: 100%;
+        height: 100%;
+
+        .inner-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            height: 100%;
+
+            .left-box {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+
+                h1 {
+                    padding: 0;
+                    margin: 0;
+
+                    color: white;
+
+                    span {
+                        border-bottom: 2px solid rgba(0, 255, 132, 1);
+                    }
+
+                    @include mQ(768px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 14px;
+
+                    @include mQ(768px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                button {
+
+                    max-width: 230px;
+                    border: 0;
+                    outline: 0;
+                    margin-top: 20px;
+                    background-color: rgba(0, 35, 51, 1);
+
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 0 0 20px;
+                    align-items: center;
+                    align-content: center;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 14px;
+
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        width: 50px;
+                        height: 50px;
+                        background-color: rgba(0, 255, 132, 1);
+
+                        i {
+                            color: rgba(0, 35, 51, 1);
+                        }
+                    }
+
+                    @include mQ(768px) {
+                        width: 260px;
+                    }
+
+
+                }
+
+                @include mQ(768px) {
+                    width: 100%;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                }
+            }
+
+            .right-box {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        padding: 10px 12px;
+                        margin: 5px 0;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+
+                        a {
+                            text-decoration: none;
+
+                            i {
+                                color: white;
+                            }
+
+
+                        }
+                    }
+
+                    @include mQ(768px) {
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        align-content: center;
+                    }
+                }
+
+                @include mQ(768px) {
+                    margin-top: 40px;
+                    width: 100%;
+                    justify-content: center;
+
+                }
+            }
+
+            @include mQ(768px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+        .down-box {
+
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            transform: translate(-50%, 0);
+            left: 50%;
+            bottom: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 60px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+
+            .down-item {
+                position: absolute;
+                top: 30px;
+
+                i {
+                    font-size: 25px;
+                }
+            }
+
+            @include mQ(768px) {
+                width: 50px;
+                height: 50px;
+                border-bottom: 50px solid white;
+
+            }
+        }
+    }
+
+    @include mQ(768px) {
+        height: 80vh;
+    }
+}

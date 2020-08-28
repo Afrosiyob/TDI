@@ -26,7 +26,7 @@
     }
 
     .main-box {
-        padding: 5px 0;
+        padding: 0px 0;
         box-sizing: border-box;
 
         .navbar-box {
@@ -74,7 +74,7 @@
 
             img {
                 width: 100%;
-                max-width: 240px;
+                max-width: 200px;
                 height: auto;
                 @extend %anim;
 

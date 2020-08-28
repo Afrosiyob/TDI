@@ -1,0 +1,42 @@
+.cat-box {
+
+    padding: 15px 30px;
+    text-align: center;
+    border: 1px solid rgba(0, 35, 51, 1);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    box-sizing: border-box;
+    box-shadow: 0px 36px 45px rgba(0, 0, 0, 0.05);
+
+    a {
+        text-decoration: none;
+        transition: all 0.2s linear;
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 35, 51, 1);
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.2s linear;
+    }
+
+    &:hover {
+        &::after {
+            width: 105%;
+        }
+
+        a {
+            color: white !important;
+        }
+
+        cursor: pointer;
+    }
+}

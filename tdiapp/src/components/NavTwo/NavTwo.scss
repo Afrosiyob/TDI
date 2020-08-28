@@ -1,6 +1,6 @@
 .nav-two {
     background-color: transparent;
-    padding: 7px 0;
+    padding: 5px 0;
 
     .navbar-brand {
         font-size: 16px;
@@ -11,6 +11,10 @@
     li {
         a {
             text-transform: uppercase;
+
+            @media screen and (max-width:768px) {
+                font-size: 14px;
+            }
         }
     }
 }
