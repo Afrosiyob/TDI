@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/pages/Home/Home.vue";
 import Person from "../views/Person.vue";
 import i18n from "../i18n";
 
@@ -20,7 +20,7 @@ const routes = [
     },
     children: [
       {
-        path: "home",
+        path: "/",
 
         component: Home,
       },

@@ -1,0 +1,16 @@
+.nav-two {
+    background-color: transparent;
+    padding: 7px 0;
+
+    .navbar-brand {
+        font-size: 16px;
+        font-weight: bolder;
+        color: #002333;
+    }
+
+    li {
+        a {
+            text-transform: uppercase;
+        }
+    }
+}

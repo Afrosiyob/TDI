@@ -1,58 +1,57 @@
 <template>
   <div id="app">
-    {{ $t("message") }}
-    <router-link :to="`/${$i18n.locale}/home`">home page</router-link>
-    <router-link :to="`/${$i18n.locale}/person`">person</router-link>
+    <navbar-vue />
 
-    <button @click.prevent="gogo('en')">en</button>
-    <button @click.prevent="gogo('ru')">ru</button>
-
-    <transition name="slide">
+    <transition name="component-fade" mode="out-in">
       <router-view></router-view>
     </transition>
 
-    <img alt="Vue logo" src="@/assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <footer-vue />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import NavbarVue from "./components/Navbar/Navbar.vue";
+import FooterVue from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-  },
-  data() {
-    return { langs: ["en", "ru"] };
-  },
-  methods: {
-    gogo(locale) {
-      this.$i18n.locale = locale;
-      this.$router.push({
-        params: { lang: locale },
-      });
-    },
+    NavbarVue,
+    FooterVue,
   },
 };
 </script>
 
 <style lang="scss">
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
   color: #2c3e50;
-  margin-top: 60px;
+
   a {
     font-weight: bold;
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      // color: #42b983;
     }
+  }
+  .component-fade-enter-active,
+  .component-fade-leave-active {
+    transition: opacity 0.3s ease;
+  }
+  .component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 }
 </style>

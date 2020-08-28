@@ -1,10 +1,12 @@
 <template>
-  <div>this is home {{ $t("message") }}</div>
+  <div>
+    this is header
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: "Header",
 };
 </script>
 

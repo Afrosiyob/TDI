@@ -1,0 +1,122 @@
+%anim {
+    transition: all 0.2s linear;
+}
+
+@mixin mQ($arg) {
+    @media all and (max-width: $arg) {
+        @content;
+    }
+}
+
+.nav-one {
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    .top-box {
+        width: 100%;
+        height: 30px;
+        background-color: #002333;
+        @extend %anim;
+
+        @include mQ(768px) {
+            height: 15px;
+        }
+    }
+
+    .main-box {
+        padding: 5px 0;
+        box-sizing: border-box;
+
+        .navbar-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            padding: 0;
+
+            .searching-box {
+                background-color: #f2f2f2;
+                display: flex;
+
+                .form-inline {
+                    @include mQ(768px) {
+                        width: 100% !important;
+                    }
+                }
+
+                .searchbtn {
+                    background-color: transparent;
+                    border: none;
+
+                    i {
+                        color: black;
+                    }
+                }
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .navbar-nav {
+                @include mQ(768px) {
+                    li {
+                        margin: 5px 0;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 240px;
+                height: auto;
+                @extend %anim;
+
+                @include mQ(768px) {
+                    max-width: 140px;
+                }
+            }
+
+            .right-box {
+                a {
+                    font-weight: bold;
+                    color: #2c3e50;
+                    text-decoration: none;
+                    margin: 0 10px;
+                    font-size: 16px;
+
+                    &.router-link-exact-active {
+                        border-bottom: 1.5px solid #42b983;
+                    }
+
+                    @extend %anim;
+
+                    @include mQ(768px) {
+                        font-size: 14px;
+                    }
+                }
+
+                .btnLang {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    font-weight: bold;
+                    color: #2c3e50;
+                    @extend %anim;
+                }
+
+                .btnLangUz,
+                .btnLangEn {
+                    background-color: #002333;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "message": "hello EN i18n !!",
+  "navOne": {
+    "home": "Bosh sahifa",
+    "connect": "Bog'lanish",
+    "search": "Izlash"
+  }
+}
