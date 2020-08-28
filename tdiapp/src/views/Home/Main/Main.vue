@@ -111,11 +111,26 @@
           </b-col>
         </b-row>
       </div>
+    </b-container>
 
-      <div class="my-5">
-        kokokokoo
+    <div class="my-5 section-picture">
+      <div class="left-box">
+        <img src="../../../assets/edu-sec/edu-sec.png" />
       </div>
+      <div class="right-box">
+        <h4>
+          <b>Soha mutaxassislari bilan bog'lanish uchun treningdan o'ting.</b>
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua.
+        </p>
+        <btn-vue :titulText="btnTitul" />
+      </div>
+    </div>
 
+    <b-container>
       <div class="my-3">
         <top-titul-vue />
       </div>

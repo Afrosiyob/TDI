@@ -20,6 +20,20 @@ export default {
     NavbarVue,
     FooterVue,
   },
+
+  // created() {
+  //   var scrollPos = 0;
+
+  //   window.addEventListener("scroll", function() {
+  //     if (document.body.getBoundingClientRect().top > scrollPos) {
+  //       console.log("up");
+  //     } else {
+  //       console.log("down");
+  //     }
+
+  //     scrollPos = document.body.getBoundingClientRect().top;
+  //   });
+  // },
 };
 </script>
 
@@ -30,6 +44,7 @@ body {
   box-sizing: border-box;
 }
 #app {
+  position: relative;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

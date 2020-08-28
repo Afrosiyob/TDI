@@ -114,3 +114,79 @@
         flex-wrap: wrap;
     }
 }
+
+.section-picture {
+    // background-color: red;
+    display: flex;
+
+    @include mQ(768px) {
+        flex-direction: column;
+    }
+
+    .left-box {
+        // background-color: yellow;
+        width: 55%;
+        position: relative;
+        padding: 70px 0 70px 50px;
+
+        @include mQ(768px) {
+            padding: 20px 0 20px 10px;
+            width: 100%;
+        }
+
+
+
+        img {
+            float: right;
+
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+
+        }
+
+        &::before {
+            content: "";
+            width: 95%;
+            background-color: rgba(0, 255, 132, 1);
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -2;
+        }
+
+        &::after {
+            content: "";
+            width: 90%;
+            background-color: rgba(0, 35, 51, 1);
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    .right-box {
+        padding: 0 50px;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+
+        p {
+            font-size: 14px;
+        }
+
+        // background-color: orange;
+        @include mQ(768px) {
+            width: 100%;
+            padding: 20px 10px;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}

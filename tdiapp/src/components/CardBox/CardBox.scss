@@ -74,6 +74,10 @@ a {
                     padding: 10px 15px;
                     background-color: rgba(0, 35, 51, 1);
                     @extend %anim;
+
+                    i {
+                        color: white;
+                    }
                 }
 
             }
@@ -86,6 +90,11 @@ a {
             .under-box {
                 a {
                     background-color: rgba(0, 255, 132, 1);
+                    border-radius: 50%;
+
+                    i {
+                        color: rgba(0, 35, 51, 1);
+                    }
                 }
             }
 

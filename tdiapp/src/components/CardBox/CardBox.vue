@@ -20,7 +20,7 @@
           </ul>
 
           <div class="under-box">
-            <p><b>1,621,110</b>Views <span>2 h 40 min</span></p>
+            <p><b>1,621,110</b> <em>Views</em> <span>2 h 40 min</span></p>
             <a href="#!">
               <i class="fas fa-play"></i>
             </a>
