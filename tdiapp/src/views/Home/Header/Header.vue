@@ -11,7 +11,9 @@
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua. At vero
           </p>
-          <btn-vue :titulText="btnTitul" />
+          <div class="mt-3">
+            <btn-vue :titulText="btnTitul" />
+          </div>
         </div>
         <div class="right-box">
           <ul>

@@ -1,0 +1,35 @@
+.all-main-box {
+
+    .left-box {
+        // background-color: red;
+        padding: 0;
+
+
+        .top-titul {
+            width: 100%;
+            display: flex;
+            background-color: #002333;
+            padding: 20px 0;
+            justify-content: space-around;
+
+            h3 {
+                padding: 0;
+                margin: 0;
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 20px;
+            }
+
+            span {
+                width: 25px;
+                height: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                border-radius: 50%;
+                background-color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+}

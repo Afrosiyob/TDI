@@ -27,5 +27,9 @@
 
     @include mQ(768px) {
         flex-direction: column;
+
+        h4 {
+            margin-bottom: 10px !important;
+        }
     }
 }

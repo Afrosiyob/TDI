@@ -5,7 +5,9 @@ import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
+import StarRating from "vue-star-rating";
 
+Vue.component("star-rating", StarRating);
 Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {

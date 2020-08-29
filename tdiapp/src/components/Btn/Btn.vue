@@ -1,9 +1,10 @@
 <template>
   <div>
-    <button>
-      <p>{{ btnText }}</p>
-      <span><i class="fas fa-angle-right"></i> </span>
-    </button>
+    <router-link :to="`/${$i18n.locale}/all`">
+      <button>
+        <p>{{ btnText }}</p>
+        <span><i class="fas fa-angle-right"></i> </span></button
+    ></router-link>
   </div>
 </template>
 
