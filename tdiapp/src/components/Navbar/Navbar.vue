@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed-top bg-white">
     <nav-one-vue />
     <nav-two-vue />
   </div>
