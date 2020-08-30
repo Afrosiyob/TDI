@@ -2,7 +2,7 @@
   <div class="about-box">
     <a-header-vue />
 
-    <b-container>
+    <b-container class="mb-5">
       <a-main-vue />
     </b-container>
   </div>

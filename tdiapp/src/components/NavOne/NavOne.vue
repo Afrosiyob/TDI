@@ -53,6 +53,16 @@
                     en
                   </button>
                 </li>
+                <li>
+                  <a href="#!" class="enter"
+                    >Tizimga kirish <i class="fas fa-sign-in-alt"></i
+                  ></a>
+                </li>
+                <li class="user-box">
+                  <a href="#!" class="user">
+                    <img src="https://placekitten.com/300/300" alt="user" />
+                  </a>
+                </li>
               </b-navbar-nav>
             </b-navbar-nav>
           </b-collapse>

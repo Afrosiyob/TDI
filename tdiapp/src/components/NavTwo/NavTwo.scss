@@ -18,3 +18,22 @@
         }
     }
 }
+
+.navbar-vis {
+    @media screen and (max-width:992px) {
+        display: none;
+    }
+}
+
+.sidebar-box {
+    display: none;
+
+    .btn-sidebar {
+        font-size: 30px;
+    }
+
+
+    @media screen and (max-width:992px) {
+        display: block;
+    }
+}

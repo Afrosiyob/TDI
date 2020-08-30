@@ -5,7 +5,7 @@ import Person from "@/views/Person.vue";
 import i18n from "@/i18n";
 import Allcourses from "@/pages/AllCourses/AllCourses.vue";
 import About from "@/pages/About/About.vue";
-
+import MyCourses from "@/pages/MyCourses/MyCourses.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -38,6 +38,10 @@ const routes = [
       {
         path: "about",
         component: About,
+      },
+      {
+        path: "mycourses",
+        component: MyCourses,
       },
     ],
   },
