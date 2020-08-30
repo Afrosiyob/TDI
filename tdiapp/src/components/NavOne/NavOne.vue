@@ -33,7 +33,7 @@
                   }}</router-link>
                 </li>
                 <li>
-                  <router-link :to="`/${$i18n.locale}/all`">{{
+                  <router-link :to="`/${$i18n.locale}/about`">{{
                     $t("navOne.connect")
                   }}</router-link>
                 </li>

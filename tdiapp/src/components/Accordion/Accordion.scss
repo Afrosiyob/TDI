@@ -1,0 +1,82 @@
+.btn-item {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    padding: 10px;
+
+    &:focus {
+        border: none;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 10px;
+            color: lightgrey;
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.ac-header {
+    border: none;
+
+}
+
+.ac-box {
+    background-color: rgb(38, 68, 81);
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: rgb(38, 68, 81);
+    border: none;
+    border-radius: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.card-header {
+    background: transparent;
+    border: none;
+}
+
+
+.card-body {
+    padding-top: 0;
+
+    a {
+        color: rgb(199, 198, 198) !important;
+        font-weight: 400 !important;
+        text-decoration: none;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-top: 10px;
+            margin-right: 10px;
+            font-size: 14px;
+
+        }
+
+
+    }
+}

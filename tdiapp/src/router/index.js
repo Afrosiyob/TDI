@@ -4,6 +4,7 @@ import Home from "@/pages/Home/Home.vue";
 import Person from "@/views/Person.vue";
 import i18n from "@/i18n";
 import Allcourses from "@/pages/AllCourses/AllCourses.vue";
+import About from "@/pages/About/About.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,10 @@ const routes = [
       {
         path: "all",
         component: Allcourses,
+      },
+      {
+        path: "about",
+        component: About,
       },
     ],
   },
