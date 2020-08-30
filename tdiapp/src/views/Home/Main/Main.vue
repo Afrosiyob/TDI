@@ -62,16 +62,16 @@
       <div class="my-3 p-0 section-cat">
         <b-row class="box-cat">
           <b-col xs="6" sm="6" md="3" class="mb-3">
-            <cat-box-vue :catTitul="catTitul" />
+            <cat-box-vue :catTitul="'Dasturlash'" />
           </b-col>
           <b-col xs="6" sm="6" md="3" class="mb-3">
-            <cat-box-vue :catTitul="catTitul" />
+            <cat-box-vue :catTitul="'Dizayn'" />
           </b-col>
           <b-col xs="6" sm="6" md="3" class="mb-3">
-            <cat-box-vue :catTitul="catTitul" />
+            <cat-box-vue :catTitul="'Biznes'" />
           </b-col>
           <b-col xs="6" sm="6" md="3" class="mb-3">
-            <cat-box-vue :catTitul="catTitul" />
+            <cat-box-vue :catTitul="'Abiturentlar uchun'" />
           </b-col>
         </b-row>
       </div>

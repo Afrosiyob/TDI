@@ -13,6 +13,9 @@
       :key="index"
       class="round"
       :id="index"
+      :style="{
+        'background-color': color,
+      }"
     ></div>
   </div>
 </template>
@@ -20,7 +23,7 @@
 <script>
 export default {
   name: "AnimDots",
-  props: ["countDots", "w", "h", "x", "y"],
+  props: ["countDots", "w", "h", "x", "y", "color"],
   data() {
     return {
       dots: this.countDots,

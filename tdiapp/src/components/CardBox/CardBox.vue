@@ -2,8 +2,8 @@
   <div class="card-box">
     <a href="#!">
       <b-card
-        img-src="https://picsum.photos/600/300/?image=25"
-        img-alt="Image"
+        :img-src="cardImg"
+        :img-alt="cardImgAlt"
         img-top
         tag="article"
         class="mb-2 card-body"
@@ -11,7 +11,7 @@
         <div class="card-main">
           <code>Course</code>
           <b-card-text>
-            Create an easy-to-ready layout content they modify
+            {{ cardTitle }}
           </b-card-text>
           <ul>
             <li>one</li>
@@ -20,7 +20,9 @@
           </ul>
 
           <div class="under-box">
-            <p><b>1,621,110</b> <em>Views</em> <span>2 h 40 min</span></p>
+            <p>
+              <b>{{ cardViews }}</b> <em>Views</em> <span>2 h 40 min</span>
+            </p>
             <a href="#!">
               <i class="fas fa-play"></i>
             </a>
@@ -34,6 +36,15 @@
 <script>
 export default {
   name: "CardBox",
+  data() {
+    return {
+      cardTitle: "Create an easy-to-ready layout content they modify",
+      cardImg: "https://picsum.photos/600/300/?image=25",
+      cardImgAlt: "this is image",
+      cardViews: 1621100,
+      cardLink: "fwefwef",
+    };
+  },
 };
 </script>
 

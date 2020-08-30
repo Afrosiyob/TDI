@@ -1,11 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/pages/Home/Home.vue";
-import Person from "@/views/Person.vue";
+
+/* language */
 import i18n from "@/i18n";
+/* all pages import here */
+import Home from "@/pages/Home/Home.vue";
 import Allcourses from "@/pages/AllCourses/AllCourses.vue";
 import About from "@/pages/About/About.vue";
 import MyCourses from "@/pages/MyCourses/MyCourses.vue";
+import Profil from "@/pages/Profil/Profil.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -26,11 +30,7 @@ const routes = [
 
         component: Home,
       },
-      {
-        path: "person",
 
-        component: Person,
-      },
       {
         path: "all",
         component: Allcourses,
@@ -42,6 +42,10 @@ const routes = [
       {
         path: "mycourses",
         component: MyCourses,
+      },
+      {
+        path: "profil",
+        component: Profil,
       },
     ],
   },

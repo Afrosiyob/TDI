@@ -1,0 +1,39 @@
+.main-box {
+    // background-color: red;
+    position: relative;
+
+    .profil-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 70px 0;
+        box-shadow: 0px 36px 45px #0000000D;
+
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        h5 {
+            color: #23283F;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+
+
+    }
+
+    .form-box {
+        box-shadow: 0px 36px 45px #0000000D;
+
+        label {
+            font-size: 14px;
+        }
+    }
+}

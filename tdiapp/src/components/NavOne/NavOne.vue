@@ -10,7 +10,9 @@
             /></router-link>
           </b-navbar-brand>
 
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          <b-navbar-toggle target="nav-collapse">
+            <i class="fa fa-bars changeIcon"></i>
+          </b-navbar-toggle>
 
           <b-collapse id="nav-collapse" is-nav>
             <!-- Right aligned nav items -->
@@ -46,12 +48,12 @@
                   </button>
                 </li>
                 <li>
-                  <button
+                  <!-- <button
                     @click.prevent="gogo('en')"
                     v-bind:class="{ btnLangEn: btnLangEn, btnLang: true }"
                   >
                     en
-                  </button>
+                  </button> -->
                 </li>
                 <li>
                   <a href="#!" class="enter"
@@ -59,9 +61,9 @@
                   ></a>
                 </li>
                 <li class="user-box">
-                  <a href="#!" class="user">
-                    <img src="https://placekitten.com/300/300" alt="user" />
-                  </a>
+                  <router-link class="user" :to="`/${$i18n.locale}/profil`">
+                    <img src="https://placekitten.com/300/300" alt="user"
+                  /></router-link>
                 </li>
               </b-navbar-nav>
             </b-navbar-nav>
@@ -73,10 +75,16 @@
 </template>
 
 <script>
+import $ from "jquery";
 export default {
   name: "NavOne",
   data() {
-    return { langs: ["uz", "en"], btnLangUz: true, btnLangEn: false };
+    return {
+      langs: ["uz", "en"],
+      btnLangUz: true,
+      btnLangEn: false,
+      count: true,
+    };
   },
   methods: {
     gogo(locale) {
@@ -90,6 +98,21 @@ export default {
         });
       }
     },
+  },
+  mounted() {
+    $(".changeIcon").click(function() {
+      if (!this.count) {
+        $(this)
+          .removeClass("fa-bars")
+          .addClass("fa-times");
+        this.count = !this.count;
+      } else {
+        $(this)
+          .removeClass("fa-times")
+          .addClass("fa-bars");
+        this.count = !this.count;
+      }
+    });
   },
 };
 </script>

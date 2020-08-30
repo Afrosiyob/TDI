@@ -7,6 +7,15 @@
         </h5>
       </div>
 
+      <anim-dots-vue
+        :countDots="36"
+        :w="300"
+        :h="50"
+        :x="0"
+        :y="50"
+        :color="'#00FF84'"
+      />
+
       <b-row>
         <b-col xs="12" sm="6" md="4" class="mb-3">
           <card-box-vue />
@@ -33,11 +42,13 @@
 
 <script>
 import CardBoxVue from "../../../components/CardBox/CardBox.vue";
+import AnimDotsVue from "../../../components/AnimDots/AnimDots.vue";
 
 export default {
   name: "MMain",
   components: {
     CardBoxVue,
+    AnimDotsVue,
   },
 };
 </script>
